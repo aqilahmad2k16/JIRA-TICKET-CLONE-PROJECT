@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.toolbox-cont {
+  height: 5rem;
+  background-color: lightblue;
+  display: flex;
+}
+
+.toolbox-priority-cont {
+  height: 3rem;
+  width: 30%;
+  background-color: darkslategrey;
+}
+
+.action-btn-cont {
+  height: 3rem;
+  width: 20%;
+  background-color: lightgreen;
+}
