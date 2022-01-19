@@ -9,18 +9,61 @@ body {
 
 .toolbox-cont {
   height: 5rem;
-  background-color: lightblue;
+  background-color: #2d3436;
   display: flex;
+  align-items: center;
+}
+
+.toolbox-cont > * {
+  margin-left: 4rem;
+  border-radius: 5px;
 }
 
 .toolbox-priority-cont {
-  height: 3rem;
-  width: 30%;
-  background-color: darkslategrey;
+  height: 3.5rem;
+  width: 16rem;
+  background-color: #34495e;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .action-btn-cont {
-  height: 3rem;
-  width: 20%;
+  height: 3.5rem;
+  width: 8rem;
+  background-color: #8c7ae6;
+  display: flex;
+}
+
+.action-btn-cont > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  font-size: 2.5rem;
+  color: #2d3436;
+}
+
+.color {
+  height: 1.5rem;
+  width: 2.5rem;
+  background: lightsalmon;
+  border-radius: 3px;
+}
+
+.lightpink {
+  background-color: lightpink;
+}
+.lightblue {
+  background-color: lightblue;
+}
+.lightgreen {
   background-color: lightgreen;
+}
+.lightblack {
+  background-color: black;
+}
+
+.action-btn-cont > *:hover {
+  background-color: #596275;
 }
