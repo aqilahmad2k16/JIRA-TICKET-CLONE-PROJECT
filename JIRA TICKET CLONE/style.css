@@ -45,7 +45,7 @@ body {
 }
 
 .color {
-  height: 1.5rem;
+  height: 1.2rem;
   width: 2.5rem;
   background: lightsalmon;
   border-radius: 3px;
@@ -66,4 +66,41 @@ body {
 
 .action-btn-cont > *:hover {
   background-color: #596275;
+}
+
+.modal-cont {
+  height: 50vh;
+  width: 45vw;
+  background-color: lightblue;
+  position: absolute;
+  top: calc((100vh - 50vh) / 2);
+  left: calc((100vw - 45vw) / 2);
+  display: flex;
+}
+
+.textarea-cont {
+  height: 100%;
+  width: 75%;
+  border: none;
+  outline: none;
+  resize: none;
+  background-color: #c8d6e5;
+  padding: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.priority-colors-cont {
+  height: 100%;
+  width: 25%;
+  background-color: #2d3436;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.priority-color {
+  height: 3rem;
+  width: 7rem;
 }
