@@ -71,11 +71,11 @@ body {
 .modal-cont {
   height: 50vh;
   width: 45vw;
-  background-color: lightblue;
+  background-color: #989b9e;
   position: absolute;
   top: calc((100vh - 50vh) / 2);
   left: calc((100vw - 45vw) / 2);
-  display: flex;
+  display: none;
 }
 
 .textarea-cont {
@@ -103,4 +103,29 @@ body {
 .priority-color {
   height: 3rem;
   width: 7rem;
+}
+
+.border {
+  border: 5px solid #c8d6e5;
+}
+
+.ticket-cont {
+  height: 12rem;
+  width: 17rem;
+  background-color: lightblue;
+}
+
+.ticket-color {
+  height: 1rem;
+  background-color: lightpink;
+}
+
+.ticket-id {
+  height: 2rem;
+  background-color: lightgreen;
+}
+
+.task-area {
+  height: calc(100% - 1rem - 2rem);
+  background-color: lightsalmon;
 }
