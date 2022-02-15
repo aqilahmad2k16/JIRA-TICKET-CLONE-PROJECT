@@ -111,8 +111,8 @@ body {
 
 .ticket-cont {
   height: 12rem;
-  width: 17rem;
-  background-color: lightblue;
+  width: 20rem;
+  background-color: #c7ecee;
 }
 
 .ticket-color {
@@ -122,10 +122,18 @@ body {
 
 .ticket-id {
   height: 2rem;
-  background-color: lightgreen;
+  padding: 0.4rem;
 }
 
 .task-area {
   height: calc(100% - 1rem - 2rem);
-  background-color: lightsalmon;
+  padding: 0.4rem;
+}
+
+.main-cont{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  gap: 2rem;
+  justify-content: center;
 }
