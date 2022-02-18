@@ -106,7 +106,7 @@ body {
 }
 
 .border {
-  border: 5px solid #c8d6e5;
+  border: 5px solid purple;
 }
 
 .ticket-cont {
@@ -117,7 +117,7 @@ body {
 
 .ticket-color {
   height: 1rem;
-  background-color: lightpink;
+  /* background-color: lightpink; */
 }
 
 .ticket-id {
