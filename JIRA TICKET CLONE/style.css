@@ -31,7 +31,7 @@ body {
 .action-btn-cont {
   height: 3.5rem;
   width: 8rem;
-  background-color: #8c7ae6;
+  background-color: #34495e;
   display: flex;
 }
 
@@ -41,7 +41,7 @@ body {
   align-items: center;
   width: 50%;
   font-size: 2.5rem;
-  color: #2d3436;
+  color: #dfe6e9;
 }
 
 .color {
@@ -60,7 +60,7 @@ body {
 .lightgreen {
   background-color: lightgreen;
 }
-.lightblack {
+.black {
   background-color: black;
 }
 
@@ -110,8 +110,8 @@ body {
 }
 
 .ticket-cont {
-  height: 12rem;
-  width: 20rem;
+  height: 14rem;
+  width: 16rem;
   background-color: #c7ecee;
 }
 
@@ -126,8 +126,9 @@ body {
 }
 
 .task-area {
-  height: calc(100% - 1rem - 2rem);
+  height: calc(100% - 1rem - 2rem - 2rem);
   padding: 0.4rem;
+  outline: none;
 }
 
 .main-cont{
@@ -136,4 +137,14 @@ body {
   padding: 2rem;
   gap: 2rem;
   justify-content: center;
+}
+
+.ticket-lock {
+  height: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 0.5rem;
+  font-size: 1.5rem;
+  padding-bottom: 0.5rem;
+  color: #b2bec3;
 }

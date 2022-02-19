@@ -1,11 +1,18 @@
 let addbtn = document.querySelector('.add-btn');
+let removeBtn = document.querySelector('.remove-btn');
+
 let modalbox = document.querySelector(".modal-cont");
 let maincont = document.querySelector(".main-cont");
 let textArea = document.querySelector(".textarea-cont");
 let allPriorityColors = document.querySelectorAll(".priority-color");
 let colors = ["lightred","lightblue","lightgreen","black"];
 let modalPriorityColor = colors[colors.length-1];
+
 let addflag = false;
+let removeflag = false;
+let lockClass = "fa-lock";
+let unlockClass = "fa-lock-open";
+
 
 
 
@@ -39,6 +46,12 @@ addbtn.addEventListener("click", (e)=>{
 
 })
 
+removeBtn.addEventListener("click", (e)=>{
+    removeflag = !removeflag;
+    console.log(removeflag);
+})
+
+
 modalbox.addEventListener("keydown", (e)=>{
     let key = e.key; // event's object;
     if(key === "Enter"){
@@ -50,12 +63,39 @@ modalbox.addEventListener("keydown", (e)=>{
 })
 
 function createticket(ticketTask,ticketColor, ticketID){
-    let createticketcont = document.createElement("div");
-    createticketcont.setAttribute("class", "ticket-cont");
-    createticketcont.innerHTML = `
+    let ticketcont = document.createElement("div");
+    ticketcont.setAttribute("class", "ticket-cont");
+    ticketcont.innerHTML = `
                     <div class="ticket-color ${ticketColor}"></div>
                     <div class="ticket-id">#${ticketID}</div>
-                    <div class="task-area">${ticketTask}</div>`;
-    maincont.appendChild(createticketcont);
+                    <div class="task-area">${ticketTask}</div>
+                    <div class="ticket-lock">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>`;
+    maincont.appendChild(ticketcont);
+    handleRemove(ticketcont);
+    handleLock(ticketcont);
 
+}
+
+function handleRemove(ticket){
+    //removeflag -> true -> remove
+    if(removeflag) ticket.remove();
+}
+
+function handleLock(ticket){
+let ticketLockElem = ticket.querySelector(".ticket-lock");
+let ticketLock = ticketLockElem.children[0];
+let ticketTaskArea = ticket.querySelector(".task-area");
+ticketLock.addEventListener("click", (e)=>{
+    if(ticketLock.classList.contains(lockClass)){
+        ticketLock.classList.remove(lockClass);
+        ticketLock.classList.add(unlockClass);
+        ticketTaskArea.setAttribute("contenteditable", "true");
+    }else{
+        ticketLock.classList.remove(unlockClass);
+        ticketLock.classList.add(lockClass);
+        ticketTaskArea.setAttribute("contenteditable","false");
+    }
+})
 }
