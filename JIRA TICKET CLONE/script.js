@@ -5,7 +5,7 @@ let modalbox = document.querySelector(".modal-cont");
 let maincont = document.querySelector(".main-cont");
 let textArea = document.querySelector(".textarea-cont");
 let allPriorityColors = document.querySelectorAll(".priority-color");
-let colors = ["lightred","lightblue","lightgreen","black"];
+let colors = ["lightpink","lightblue","lightgreen","black"];
 let modalPriorityColor = colors[colors.length-1];
 
 let addflag = false;
@@ -75,6 +75,7 @@ function createticket(ticketTask,ticketColor, ticketID){
     maincont.appendChild(ticketcont);
     handleRemove(ticketcont);
     handleLock(ticketcont);
+    handlecolor(ticketcont);
 
 }
 
@@ -98,4 +99,20 @@ ticketLock.addEventListener("click", (e)=>{
         ticketTaskArea.setAttribute("contenteditable","false");
     }
 })
+}
+
+function handlecolor(ticket){
+    let ticketColor = ticket.querySelector(".ticket-color");
+    ticketColor.addEventListener("click", (e)=>{
+    let currentTicketColor = ticketColor.classList[1];
+    // get ticket color index
+    let currentTicketColorIdx = colors.findIndex((color) =>{
+        return currentTicketColor === color;
+    })
+    currentTicketColorIdx++;
+    let newTicketColorIdx = currentTicketColorIdx%colors.length;
+    let newTicketColor = colors[newTicketColorIdx];
+    ticketColor.classList.remove(currentTicketColor);
+    ticketColor.classList.add(newTicketColor)
+    })
 }
